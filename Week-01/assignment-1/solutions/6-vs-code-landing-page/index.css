@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif;
+  background-color: #1e1e1e;
+  color: #cccccc;
+}
+
+/* Header */
+.header {
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #333333;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 30px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.logo img {
+  height: 24px;
+  display: block;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.search-box input {
+  background-color: #3c3c3c;
+  border: 1px solid #555555;
+  border-radius: 4px;
+  padding: 5px 12px;
+  color: #cccccc;
+  font-size: 0.8rem;
+  width: 200px;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.search-box input:focus {
+  border-color: #007acc;
+}
+
+.search-box input::placeholder {
+  color: #888888;
+}
+
+.btn-download-nav {
+  background-color: #007acc;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 6px 16px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btn-download-nav:hover {
+  background-color: #0062a3;
+}
+
+/* Banner */
+.banner {
+  background-color: #007acc;
+  text-align: center;
+  padding: 10px 20px;
+}
+
+.banner p {
+  color: #ffffff;
+  font-size: 0.85rem;
+}
+
+.banner a {
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.banner a:hover {
+  opacity: 0.9;
+}
+
+/* Hero */
+.hero {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+  color: #007acc;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #999999;
+  margin-bottom: 30px;
+  max-width: 500px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.btn-download {
+  background-color: #007acc;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.btn-download:hover {
+  background-color: #0062a3;
+}
+
+.btn-docs {
+  background-color: transparent;
+  color: #007acc;
+  text-decoration: none;
+  padding: 12px 28px;
+  border: 1px solid #007acc;
+  border-radius: 4px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.btn-docs:hover {
+  background-color: #007acc;
+  color: #ffffff;
+}
+
+.hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 560px;
+  border-radius: 8px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* Languages Section */
+.languages-section {
+  border-top: 1px solid #333333;
+}
+
+.languages-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 80px 40px;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.languages-left h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 16px;
+}
+
+.languages-left p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #999999;
+}
+
+.lang-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.lang-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 10px;
+  border-radius: 6px;
+  transition: background-color 0.2s;
+}
+
+.lang-item:hover {
+  background-color: #2d2d2d;
+}
+
+.lang-item img {
+  width: 36px;
+  height: 36px;
+}
+
+.lang-item span {
+  color: #cccccc;
+  font-size: 0.85rem;
+}

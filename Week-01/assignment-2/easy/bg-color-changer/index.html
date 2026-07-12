@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BG Color Changer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>Background Color Changer</h1>
+            
+            <div class="current-color">
+                <span class="label">Current Color:</span>
+                <span id="colorDisplay" class="color-name">#667eea</span>
+            </div>
+            
+            <div class="color-preview" id="colorPreview"></div>
+            
+            <div class="preset-colors">
+                <h2>Preset Colors</h2>
+                <div class="color-grid">
+                    <button class="color-btn" data-color="#ff6b6b" data-name="Red" style="background: #ff6b6b;">Red</button>
+                    <button class="color-btn" data-color="#4ecdc4" data-name="Teal" style="background: #4ecdc4;">Teal</button>
+                    <button class="color-btn" data-color="#45b7d1" data-name="Sky Blue" style="background: #45b7d1;">Sky Blue</button>
+                    <button class="color-btn" data-color="#96ceb4" data-name="Mint" style="background: #96ceb4;">Mint</button>
+                    <button class="color-btn" data-color="#ffeaa7" data-name="Yellow" style="background: #ffeaa7; color: #333;">Yellow</button>
+                    <button class="color-btn" data-color="#dfe6e9" data-name="Light Gray" style="background: #dfe6e9; color: #333;">Light Gray</button>
+                    <button class="color-btn" data-color="#fd79a8" data-name="Pink" style="background: #fd79a8;">Pink</button>
+                    <button class="color-btn" data-color="#a29bfe" data-name="Lavender" style="background: #a29bfe;">Lavender</button>
+                    <button class="color-btn" data-color="#fdcb6e" data-name="Gold" style="background: #fdcb6e; color: #333;">Gold</button>
+                    <button class="color-btn" data-color="#00b894" data-name="Emerald" style="background: #00b894;">Emerald</button>
+                    <button class="color-btn" data-color="#e17055" data-name="Coral" style="background: #e17055;">Coral</button>
+                    <button class="color-btn" data-color="#6c5ce7" data-name="Purple" style="background: #6c5ce7;">Purple</button>
+                    <button class="color-btn" data-color="#00cec9" data-name="Cyan" style="background: #00cec9;">Cyan</button>
+                    <button class="color-btn" data-color="#fab1a0" data-name="Peach" style="background: #fab1a0; color: #333;">Peach</button>
+                    <button class="color-btn" data-color="#55a3e8" data-name="Blue" style="background: #55a3e8;">Blue</button>
+                    <button class="color-btn" data-color="#2d3436" data-name="Dark Gray" style="background: #2d3436;">Dark Gray</button>
+                </div>
+            </div>
+            
+            <div class="custom-color">
+                <h2>Custom Color</h2>
+                <div class="custom-input">
+                    <input type="color" id="colorPicker" value="#667eea">
+                    <input type="text" id="hexInput" placeholder="#000000" maxlength="7">
+                    <button id="applyCustom" class="apply-btn">Apply</button>
+                </div>
+            </div>
+            
+            <div class="random-section">
+                <button id="randomBtn" class="random-btn">Random Color</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

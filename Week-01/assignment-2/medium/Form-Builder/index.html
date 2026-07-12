@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Form Builder</h1>
+            <p>Click buttons to add form fields to your preview</p>
+        </header>
+        
+        <div class="main-content">
+            <aside class="sidebar">
+                <h2>Add Fields</h2>
+                <div class="field-buttons">
+                    <button class="field-btn" data-type="text">
+                        <span class="icon">Aa</span>
+                        Text Input
+                    </button>
+                    <button class="field-btn" data-type="email">
+                        <span class="icon">@</span>
+                        Email Input
+                    </button>
+                    <button class="field-btn" data-type="password">
+                        <span class="icon">***</span>
+                        Password
+                    </button>
+                    <button class="field-btn" data-type="number">
+                        <span class="icon">#</span>
+                        Number
+                    </button>
+                    <button class="field-btn" data-type="checkbox">
+                        <span class="icon">☑</span>
+                        Checkbox
+                    </button>
+                    <button class="field-btn" data-type="radio">
+                        <span class="icon">◉</span>
+                        Radio Button
+                    </button>
+                    <button class="field-btn" data-type="textarea">
+                        <span class="icon">¶</span>
+                        Textarea
+                    </button>
+                    <button class="field-btn" data-type="select">
+                        <span class="icon">▼</span>
+                        Dropdown
+                    </button>
+                    <button class="field-btn" data-type="date">
+                        <span class="icon">📅</span>
+                        Date Picker
+                    </button>
+                </div>
+                
+                <div class="actions">
+                    <button id="clearBtn" class="action-btn clear">Clear All</button>
+                    <button id="exportBtn" class="action-btn export">Export HTML</button>
+                </div>
+            </aside>
+            
+            <main class="preview-area">
+                <h2>Form Preview</h2>
+                <div id="formPreview" class="form-preview">
+                    <p class="empty-state">No fields added yet. Click a button in the sidebar to add form fields.</p>
+                </div>
+            </main>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taskify</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <h1>Taskify</h1>
+            <p>Drag and drop tasks between columns</p>
+        </header>
+        
+        <div class="add-task-section">
+            <input type="text" id="taskInput" placeholder="Enter a new task..." maxlength="100">
+            <select id="columnSelect">
+                <option value="todo">To Do</option>
+                <option value="progress">In Progress</option>
+                <option value="done">Done</option>
+            </select>
+            <button id="addTaskBtn">Add Task</button>
+        </div>
+        
+        <div class="board">
+            <div class="column" data-column="todo">
+                <div class="column-header">
+                    <h2>To Do</h2>
+                    <span class="task-count" id="todoCount">0</span>
+                </div>
+                <div class="tasks-container" id="todoTasks"></div>
+            </div>
+            
+            <div class="column" data-column="progress">
+                <div class="column-header">
+                    <h2>In Progress</h2>
+                    <span class="task-count" id="progressCount">0</span>
+                </div>
+                <div class="tasks-container" id="progressTasks"></div>
+            </div>
+            
+            <div class="column" data-column="done">
+                <div class="column-header">
+                    <h2>Done</h2>
+                    <span class="task-count" id="doneCount">0</span>
+                </div>
+                <div class="tasks-container" id="doneTasks"></div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

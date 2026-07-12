@@ -1,0 +1,294 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.app-container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+    opacity: 0.9;
+    font-size: 1.1rem;
+}
+
+.main-content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 25px;
+    min-height: calc(100vh - 180px);
+}
+
+.sidebar {
+    background: white;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    height: fit-content;
+    position: sticky;
+    top: 20px;
+}
+
+.sidebar h2 {
+    color: #333;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+}
+
+.field-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.field-btn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.field-btn:hover {
+    border-color: #667eea;
+    background: #f8f9ff;
+    transform: translateX(5px);
+}
+
+.field-btn .icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.action-btn {
+    padding: 12px;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.action-btn.clear {
+    background: #ff6b6b;
+    color: white;
+}
+
+.action-btn.clear:hover {
+    background: #ee5a5a;
+}
+
+.action-btn.export {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.action-btn.export:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.preview-area {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.preview-area h2 {
+    color: #333;
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+}
+
+.form-preview {
+    min-height: 400px;
+}
+
+.empty-state {
+    text-align: center;
+    color: #999;
+    font-size: 1rem;
+    padding: 50px 20px;
+}
+
+.form-field {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 15px;
+    position: relative;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+.form-field:hover {
+    border-color: #667eea;
+}
+
+.form-field-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.field-type {
+    font-size: 0.75rem;
+    color: #667eea;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.delete-btn {
+    width: 28px;
+    height: 28px;
+    border: none;
+    background: #ff6b6b;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    opacity: 0;
+}
+
+.form-field:hover .delete-btn {
+    opacity: 1;
+}
+
+.delete-btn:hover {
+    background: #ee5a5a;
+    transform: scale(1.1);
+}
+
+.field-label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+}
+
+.field-label input {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.95rem;
+}
+
+.field-label input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.field-input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.field-input:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+textarea.field-input {
+    min-height: 100px;
+    resize: vertical;
+}
+
+select.field-input {
+    cursor: pointer;
+}
+
+.checkbox-group,
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.checkbox-item,
+.radio-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.checkbox-item input,
+.radio-item input {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.checkbox-item label,
+.radio-item label {
+    cursor: pointer;
+    color: #333;
+}
+
+@media (max-width: 900px) {
+    .main-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .sidebar {
+        position: static;
+    }
+}

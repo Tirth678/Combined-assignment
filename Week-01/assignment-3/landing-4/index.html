@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexusAPI - The Modern API Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a href="#" class="logo">
+        <span class="logo-mark">&lt;/&gt;</span> NexusAPI
+      </a>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#platform">Platform</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#">Docs</a></li>
+      </ul>
+      <div class="nav-actions">
+        <a href="#" class="btn btn-ghost">Sign In</a>
+        <a href="#" class="btn btn-primary">Start Free</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="badge">New: NexusAPI v3.0 is live</div>
+            <h1>Build powerful APIs in minutes</h1>
+            <p class="hero-sub">The modern API platform that handles authentication, rate limiting, caching, and monitoring — so you can focus on building products.</p>
+            <div class="hero-actions">
+              <a href="#" class="btn btn-primary btn-lg">Start Building Free</a>
+              <a href="#" class="btn btn-outline btn-lg">Read the Docs</a>
+            </div>
+            <div class="hero-code">
+              <code>
+                <span class="code-kw">const</span> <span class="code-var">api</span> = <span class="code-kw">new</span> <span class="code-fn">NexusAPI</span>({<br>
+                &nbsp;&nbsp;auth: <span class="code-str">"jwt"</span>,<br>
+                &nbsp;&nbsp;rateLimit: <span class="code-str">1000</span>,<br>
+                &nbsp;&nbsp;cache: <span class="code-bool">true</span><br>
+                });
+              </code>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <div class="dashboard-mockup">
+              <div class="mockup-header">
+                <div class="mockup-dots">
+                  <span></span><span></span><span></span>
+                </div>
+                <span class="mockup-title">NexusAPI Dashboard</span>
+              </div>
+              <div class="mockup-body">
+                <div class="mockup-stat">
+                  <span class="mockup-label">Requests Today</span>
+                  <span class="mockup-value">2.4M</span>
+                  <div class="mockup-bar"><div class="mockup-fill" style="width:78%"></div></div>
+                </div>
+                <div class="mockup-stat">
+                  <span class="mockup-label">Avg Latency</span>
+                  <span class="mockup-value">12ms</span>
+                  <div class="mockup-bar"><div class="mockup-fill green" style="width:45%"></div></div>
+                </div>
+                <div class="mockup-stat">
+                  <span class="mockup-label">Uptime</span>
+                  <span class="mockup-value">99.99%</span>
+                  <div class="mockup-bar"><div class="mockup-fill green" style="width:99%"></div></div>
+                </div>
+                <div class="mockup-endpoints">
+                  <span class="mockup-endpoint ok">GET /users</span>
+                  <span class="mockup-endpoint ok">POST /auth</span>
+                  <span class="mockup-endpoint warn">GET /data</span>
+                  <span class="mockup-endpoint ok">PUT /users/:id</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-number">10K+</span>
+            <span class="stat-label">Developers</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">99.99%</span>
+            <span class="stat-label">Uptime SLA</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">50+</span>
+            <span class="stat-label">Integrations</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number">&lt;15ms</span>
+            <span class="stat-label">Avg Response</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="container">
+        <div class="feature-row">
+          <div class="feature-text">
+            <p class="feature-label">Authentication</p>
+            <h2>Enterprise-grade auth out of the box</h2>
+            <p>Support for JWT, OAuth 2.0, API keys, and custom auth strategies. Protect your endpoints with a single line of configuration.</p>
+            <ul class="feature-list">
+              <li>Multi-factor authentication</li>
+              <li>Role-based access control</li>
+              <li>OAuth 2.0 & OpenID Connect</li>
+            </ul>
+          </div>
+          <div class="feature-visual">
+            <div class="visual-card">
+              <div class="code-block">
+                <span class="code-comment">// Protect any endpoint</span><br>
+                app.<span class="code-fn">use</span>(nexus.<span class="code-fn">auth</span>({<br>
+                &nbsp;&nbsp;strategy: <span class="code-str">"jwt"</span>,<br>
+                &nbsp;&nbsp;roles: [<span class="code-str">"admin"</span>, <span class="code-str">"user"</span>]<br>
+                }));
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-row reverse">
+          <div class="feature-text">
+            <p class="feature-label">Rate Limiting</p>
+            <h2>Smart rate limiting that adapts</h2>
+            <p>Intelligent rate limiting that protects your APIs without frustrating legitimate users. Configure per-user, per-endpoint, or global limits.</p>
+            <ul class="feature-list">
+              <li>Token bucket & sliding window</li>
+              <li>Per-user dynamic limits</li>
+              <li>Real-time usage dashboards</li>
+            </ul>
+          </div>
+          <div class="feature-visual">
+            <div class="visual-card">
+              <div class="visual-graph">
+                <div class="graph-title">Requests / Second</div>
+                <div class="graph-bars">
+                  <div class="graph-bar" style="height:40%"></div>
+                  <div class="graph-bar" style="height:65%"></div>
+                  <div class="graph-bar" style="height:80%"></div>
+                  <div class="graph-bar" style="height:55%"></div>
+                  <div class="graph-bar" style="height:90%"></div>
+                  <div class="graph-bar" style="height:70%"></div>
+                  <div class="graph-bar" style="height:85%"></div>
+                  <div class="graph-bar" style="height:60%"></div>
+                  <div class="graph-bar" style="height:95%"></div>
+                  <div class="graph-bar" style="height:75%"></div>
+                  <div class="graph-bar" style="height:50%"></div>
+                  <div class="graph-bar" style="height:82%"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="feature-row">
+          <div class="feature-text">
+            <p class="feature-label">Monitoring</p>
+            <h2>Full observability from day one</h2>
+            <p>Real-time monitoring, logging, and alerting built into the platform. Know exactly what's happening with your APIs at all times.</p>
+            <ul class="feature-list">
+              <li>Real-time request tracing</li>
+              <li>Error tracking & alerting</li>
+              <li>Custom dashboards</li>
+            </ul>
+          </div>
+          <div class="feature-visual">
+            <div class="visual-card">
+              <div class="monitor-grid">
+                <div class="monitor-box green">
+                  <span class="monitor-val">99.99%</span>
+                  <span class="monitor-lbl">Uptime</span>
+                </div>
+                <div class="monitor-box blue">
+                  <span class="monitor-val">12ms</span>
+                  <span class="monitor-lbl">Latency</span>
+                </div>
+                <div class="monitor-box purple">
+                  <span class="monitor-val">0.01%</span>
+                  <span class="monitor-lbl">Error Rate</span>
+                </div>
+                <div class="monitor-box amber">
+                  <span class="monitor-val">2.4M</span>
+                  <span class="monitor-lbl">Requests</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section">
+      <div class="container">
+        <h2>Start building with NexusAPI today</h2>
+        <p>Free tier includes 100K requests/month. No credit card required.</p>
+        <div class="cta-actions">
+          <a href="#" class="btn btn-primary btn-lg">Get Your API Key</a>
+          <a href="#" class="btn btn-outline btn-lg">Schedule a Demo</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo"><span class="logo-mark">&lt;/&gt;</span> NexusAPI</a>
+          <p>The modern API platform for developers who ship fast.</p>
+          <div class="footer-social">
+            <a href="#">GitHub</a>
+            <a href="#">Twitter</a>
+            <a href="#">Discord</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">Pricing</a></li>
+            <li><a href="#">Changelog</a></li>
+            <li><a href="#">Roadmap</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Developers</h4>
+          <ul>
+            <li><a href="#">Documentation</a></li>
+            <li><a href="#">API Reference</a></li>
+            <li><a href="#">SDKs</a></li>
+            <li><a href="#">Status</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 NexusAPI. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
