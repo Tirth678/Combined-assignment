@@ -18,3 +18,24 @@
 // 78.53981633974483
 
 
+const PI = Math.PI;
+
+type Circle = {
+  radius: number;
+};
+type Rectangle = {
+  width: number;
+  height: number;
+};
+
+type Shape = Circle | Rectangle;
+
+const getArea = (shape: Shape): number => {
+  if ("radius" in shape) {
+    return PI * shape.radius * shape.radius;
+  }
+  return shape.width * shape.height;
+};
+
+const circle: Shape = { radius: 5 };
+console.log(getArea(circle));

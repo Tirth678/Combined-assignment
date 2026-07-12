@@ -6,3 +6,19 @@
 // Example Output:
 // true
 
+
+interface DrivingUser {
+  name: string;
+  age: number;
+}
+
+export function isEligibleForDriving(users: DrivingUser) {
+  return users.age >= 16;
+}
+
+console.log(
+  isEligibleForDriving({
+      name: "Alice",
+      age: 20,   
+  }),
+);

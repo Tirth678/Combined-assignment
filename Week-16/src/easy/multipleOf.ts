@@ -4,3 +4,12 @@
 // Example Input: num = 15, divisor = 5
 // Example Output: true
 
+
+const multiple = (num: number, div: number): boolean | undefined => {
+  return num % div === 0 ? true : false;
+};
+
+console.log(multiple(15, 5));
+console.log(multiple(20, 4));
+console.log(multiple(15, 4));
+console.log(multiple(0, 7));

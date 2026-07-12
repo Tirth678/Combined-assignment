@@ -1,7 +1,7 @@
-import { filterUsersByCountry, User } from "../src/hard/arrayTwo";
+import { filterUsersByCountry, CountryUser } from "../src/hard/arrayTwo";
 
 describe("filterUsersByCountry Function", () => {
-  const users: User[] = [
+  const users: CountryUser[] = [
     { name: "Alice", age: 25, country: "India" },
     { name: "Bob", age: 30, country: "USA" },
     { name: "Charlie", age: 22, country: "India" },

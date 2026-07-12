@@ -25,4 +25,21 @@
 // }
 
 
+type Product = {
+  name: string;
+  price: number;
+};
 
+type digitalProduct = {
+  downloadLink: string;
+};
+
+type FullProduct = Product & digitalProduct;
+
+const Detoll: FullProduct = {
+  name: "E-book",
+  price: 10,
+  downloadLink: "https://example.com/ebook",
+};
+
+console.log(Detoll.downloadLink);
