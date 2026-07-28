@@ -29,7 +29,7 @@ export default function RootLayout({
     >
       <body className="min-h-full flex flex-col">
         <nav className="flex justify-between bg-purple-400 p-5 text-white text-1xl font-bold">
-          <h1>Event Booking</h1>
+          <a href="/"><h1>Event Booking</h1></a>
           <div className="pr-4">
           <a className="pr-8" href="/events">Events</a>
           <a className="pr-8" href="/login">Sign In</a>

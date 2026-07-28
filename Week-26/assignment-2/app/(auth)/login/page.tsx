@@ -1,4 +1,5 @@
-import Button from "@/components/Button";
+import SignInBtn from "@/components/Signin";
+import Button from "@/components/Signin";
 
 export default function Authpage(){
   return (
@@ -9,7 +10,7 @@ export default function Authpage(){
         <input id="mail" className="bg-blue-300 text-left flex px-30 py-2 justify-center mb-8" type="text"/>
         <label htmlFor="pass" className="text-black pl-8">Password</label>
         <input id="pass" className="bg-blue-300 text-left flex px-30 py-2 justify-center" type="text"/>
-        <Button/>
+        <SignInBtn />
         <p className="text-black mt-9">Don't have an account? <a className="text-blue-400" href="/signup">Sign Up</a> </p>
     </div>
     </>

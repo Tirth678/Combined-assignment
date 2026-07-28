@@ -1,4 +1,5 @@
-import Button from '@/components/Button'
+import Button from '@/components/Signin'
+import SignUpBtn from '@/components/Signup'
 export default function Signup(){
     return (
         <>
@@ -10,7 +11,7 @@ export default function Signup(){
                 <input id="mail" className="bg-blue-300 text-left flex px-30 py-2 justify-center mb-8" type="text"/>
                 <label htmlFor="pass" className="text-black pl-8">Password</label>
                 <input id="pass" className="bg-blue-300 text-left flex px-30 py-2 justify-center" type="text"/>
-                <Button/>
+                <SignUpBtn/>
                 <p className="text-black mt-9">Have an account? <a className="text-blue-400" href="/login">Sign In</a> </p>
             </div>
         </>
