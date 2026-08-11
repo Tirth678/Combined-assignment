@@ -7,7 +7,9 @@
 */
 
 function isPalindrome(str) {
-    return true;
+  let ogStr = str.toLowerCase();
+  return ogStr.split("").reverse().join("") === ogStr;
 }
+console.log(isPalindrome("121"));
 
 module.exports = isPalindrome;
