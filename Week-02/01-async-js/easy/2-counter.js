@@ -14,3 +14,11 @@ const counter = (function count(n){
 // Start the counter
 counter();
 
+/*
+this is application of IIFE (immediately invoked function express)
+functions that are executed the moment it is declared are iife functions
+the counter variable is assigned the value of the returned function of the iife
+when the counter() is called, it will log the value of n and increment it by 1
+then call the setTimeout which will call the counter function again after 1000ms
+the process repeats itself infinitely
+*/

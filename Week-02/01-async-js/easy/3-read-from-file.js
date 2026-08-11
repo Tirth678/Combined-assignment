@@ -5,3 +5,17 @@
 // Try to do an expensive operation below the file read and see how it affects the output. 
 // Make the expensive operation more and more expensive and see how it affects the output. 
 
+import fs from 'fs';
+
+fs.readFile('./test.txt', 'utf-8', (err, res) => {
+    for(let i=0; i<1000000000; i++){
+        i += 1;
+    }
+    if(err){
+        console.log(`Error in reading filre ${err}`);
+    }
+    else{
+        console.log(res);
+    }
+
+})
